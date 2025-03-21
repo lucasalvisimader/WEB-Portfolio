@@ -229,6 +229,11 @@ form button {
     margin-bottom: 15px;
 }
 
+form input,
+form textarea {
+    font-family: "Cute Cat";
+}
+
 form textarea {
     resize: vertical;
     margin-bottom: 5px;
