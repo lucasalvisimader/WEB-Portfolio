@@ -177,9 +177,11 @@ main section {
 /* Cartões de projeto */
 .cards {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: flex-start;
     margin-top: 20px;
+    padding-bottom: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .card {
@@ -190,6 +192,8 @@ main section {
     width: 250px;
     box-shadow: 5px 5px 10px #21211fce;
     transition: transform 0.3s;
+    margin: 10px;
+    flex: 0 0 auto;
 }
 
 .card:hover {
