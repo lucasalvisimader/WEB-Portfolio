@@ -1,0 +1,259 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* the only thing needed is a grainy/noisy background image */
+    --glitter: url("/images/fire.png");
+}
+
+@font-face {
+    font-family: Cute Cat;
+    src: url('/fonts/CuteCat.otf') format('opentype');
+}
+
+::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f9f2de;
+    margin: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fb273a;
+    border-radius: 100vw;
+    border: 3px solid #f9f2de;
+}
+
+body {
+    font-family: "Cute Cat";
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #110602;
+}
+
+/* Estilo do cabeçalho */
+
+header {
+    background: #21211f;
+    color: #f1f1f1;
+    font-size: 1.75rem;
+    padding: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 2rem;
+    overflow: hidden; /* Impede o fogo de vazar */
+}
+
+header::before,
+header::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40px; /* Reduz altura do fogo */
+    content: "";
+    background-image: var(--glitter), var(--glitter),
+        linear-gradient(0deg, #fb273a 0px, #fb273a 45px, transparent 200%),
+        radial-gradient(ellipse at bottom, transparent 100%, black 0%);
+    box-shadow: inset 0 -15px 5px 0 #fb273a;
+    filter: brightness(1) blur(10px) contrast(10);
+    animation: fire 2s linear infinite;
+    background-size: 150% 150px, 150% 150px, 150% 150%, 150% 150%;
+    background-blend-mode: hard-light, color-dodge, multiply;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    mix-blend-mode: color-dodge;
+    pointer-events: none;
+}
+
+header::before {
+    top: 0;
+}
+
+header::after {
+    bottom: 0;
+    box-shadow: inset 0 15px 5px 0px #fb273a;
+}
+
+@keyframes fire {
+    0% {
+        background-position: 0 0, 10px 0, 50% 100%, center center;
+    }
+    50% {
+        background-position: 30px -80px, -10px -100px, 50% 95%, center center;
+    }
+    100% {
+        background-position: 0 -150px, -5px -180px, 50% 100%, center center;
+    }
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    width: 90px;
+    border: solid 3px #fb273a;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+}
+
+header ul li {
+    margin: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: color 0.2s;
+}
+
+header ul a:hover,
+header ul a:active {
+    color: #a5a5a5;
+}
+
+/* Estilo das seções */
+main {
+    flex: 1;
+    padding: 20px 0;
+    background-color: #f9f2de;
+}
+
+main section {
+    font-size: 1.25rem;
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#inicio {
+    background: #f0ecd9;
+    border-top: 3px solid #e0ddcb;
+    border-left: 3px solid #e0ddcb;
+    border-right: 3px solid #e0ddcb;
+}
+
+#projetos {
+    background: #e0ddcb;
+    border-left: 3px solid #cac7b7;
+    border-right: 3px solid #cac7b7;
+}
+
+#contato {
+    background: #cac7b7;
+    border-left: 3px solid #afad9f;
+    border-right: 3px solid #afad9f;
+}
+
+#sobre {
+    background: #afad9f;
+    border-left: 3px solid #97968a;
+    border-right: 3px solid #97968a;
+    border-bottom: 3px solid #97968a;
+}
+
+/* Cartões de projeto */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fb273a;
+    border: 4px solid #21211f;
+    border-radius: 15px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 5px 5px 10px #21211fce;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.1);
+    cursor: pointer;
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+}
+
+/* Formulário */
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+form input,
+form textarea,
+form button {
+    padding: 10px;
+    border: 2px solid #110602;
+    border-radius: 7px;
+    width: 100%;
+}
+
+form input,
+form button { 
+    margin-bottom: 15px;
+}
+
+form textarea {
+    resize: vertical;
+    margin-bottom: 5px;
+}
+
+form button {
+    font-family: "Cute Cat";
+    background-color: #110602;
+    color: #f1f1f1;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background-color: #21211f;
+}
+
+/* Rodapé fixo */
+
+footer {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: #a30404;
+    color: #f1f1f1;
+    position: sticky;
+    bottom: 0;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADS 3 - Site</title>
+    <link rel="shortcut icon" href="images/crown.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho com Menu -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+            </ul>
+            <img src="images/lamb.jpg" alt="Logo do Site" class="logo">
+            <ul>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção Início -->
+        <section id="inicio">
+            <h1>Seja bem vindo!</h1>
+            <p>Explore os projetos e entre em contato.</p>
+        </section>
+        
+        <!-- Projetos -->
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição do projeto 1.</p>
+                </div>
+                <div class="card">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição do projeto 2.</p>
+                </div>
+                <div class="card">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição do projeto 3.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Contato -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem"></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+        <!-- Seção Sobre -->
+        <section id="sobre">
+            <h2>Sobre</h2>
+        </section>
+    </main>
+    <footer>
+        <p>&copy 2025 - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
