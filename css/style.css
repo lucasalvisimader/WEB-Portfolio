@@ -145,6 +145,7 @@ main section {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    scroll-margin-top: 200px;
 }
 
 #inicio {
