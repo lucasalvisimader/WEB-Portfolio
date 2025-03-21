@@ -127,8 +127,8 @@ header ul li a {
     transition: color 0.2s;
 }
 
-header ul a:hover,
-header ul a:active {
+header ul li a:hover,
+header ul li a:active {
     color: #a5a5a5;
 }
 
@@ -262,4 +262,65 @@ footer {
     color: #f1f1f1;
     position: sticky;
     bottom: 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header .logo {
+        width: 70px;
+    }
+
+    header nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    header nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    header ul {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    main section {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.35rem;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+    }
+
+    p, label {
+        font-size: 1.15rem;
+    }
+
+    form {
+        max-width: 300px;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 90%;
+    }
 }
