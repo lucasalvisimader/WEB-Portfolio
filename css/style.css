@@ -232,10 +232,6 @@ main section {
     border-radius: 5px;
 }
 
-/* .card:hover {
-    transform: translateY(-5px);
-} */
-
 /* Formulário */
 
 form {
@@ -333,6 +329,10 @@ footer {
         width: 80%;
     }
 
+    .card img {
+        max-width: 20%;
+    }
+
     main section {
         padding: 20px 10px;
     }
@@ -358,5 +358,9 @@ footer {
 
     .card {
         width: 90%;
+    }
+    
+    .card img {
+        max-width: 30%;
     }
 }
