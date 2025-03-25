@@ -291,6 +291,10 @@ section.animate {
     border-radius: 5px;
 }
 
+.card p {
+    white-space: initial;
+}
+
 /* Formulário */
 
 form {
