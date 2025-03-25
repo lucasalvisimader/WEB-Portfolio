@@ -103,7 +103,7 @@ header nav {
     margin: 0 auto;
 }
 
-header .logo {
+header .logo_do_site {
     width: 90px;
     border: solid 3px #fb273a;
 }
@@ -146,6 +146,36 @@ main section {
     max-width: 1200px;
     margin: 0 auto;
     scroll-margin-top: 200px;
+    opacity: 0;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* Seções que surgem da esquerda */
+.from-left {
+    transform: translateX(-100px);
+}
+
+/* Seções que surgem da direita */
+.from-right {
+    transform: translateX(100px);
+}
+
+section.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Elementos internos da seção invisíveis */
+.hidden {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Animação dos itens da seção aparecendo */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #inicio {
@@ -155,23 +185,52 @@ main section {
     border-right: 3px solid #e0ddcb;
 }
 
-#projetos {
+#sobre_mim {
     background: #e0ddcb;
     border-left: 3px solid #cac7b7;
     border-right: 3px solid #cac7b7;
 }
 
-#contato {
+#projetos {
     background: #cac7b7;
     border-left: 3px solid #afad9f;
     border-right: 3px solid #afad9f;
 }
 
-#sobre {
+#contato {
     background: #afad9f;
     border-left: 3px solid #97968a;
     border-right: 3px solid #97968a;
     border-bottom: 3px solid #97968a;
+}
+
+/* Início */
+.inicio h1 {
+    font-size: 2rem;
+}
+
+.inicio p {
+    font-size: 1.5rem;
+}
+
+/* Sobre mim */
+.sobre_mim_container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre a imagem e o texto */
+    text-align: left;
+    justify-content: start; /* O texto fica à direita */
+}
+
+.imagem_desenvolvedor {
+    width: 200px;
+    height: auto;
+    border: solid 3px #fb273a;
+    border-radius: 15px;
+}
+
+.sobre_mim_texto {
+    max-width: 600px;
 }
 
 /* Cartões de projeto */
@@ -296,12 +355,16 @@ footer {
     bottom: 0;
 }
 
+.redes_sociais img {
+    height: 50px;
+}
+
 @media (max-width: 768px) {
     header {
         padding: 10px;
     }
 
-    header .logo {
+    header .logo_do_site {
         width: 70px;
     }
 

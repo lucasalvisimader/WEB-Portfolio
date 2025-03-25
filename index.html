@@ -15,7 +15,7 @@
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#projetos">Projetos</a></li>
             </ul>
-            <img src="images/lamb.jpg" alt="Logo do Site" class="logo">
+            <img src="images/lamb.jpg" alt="Logo do Site" class="logo_do_site">
             <ul>
                 <li><a href="#contato">Contato</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -26,16 +26,29 @@
     <!-- Conteúdo Principal -->
     <main>
         <!-- Seção Início -->
-        <section id="inicio">
-            <h1>Seja bem vindo!</h1>
-            <p>Explore os projetos e entre em contato.</p>
+        <section class="inicio" id="inicio">
+            <h1 class="animate-item">Olá! Sou Lucas Alvisi Mader.</h1>
+            <p class="animate-item">Um desenvolvedor.</p>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre_mim">
+            <h2 class="animate-item">Sobre mim</h2>
+            <div class="sobre_mim_container animate-item">
+                <img class="imagem_desenvolvedor animate-item" src="images/perfil_photo.jfif" alt="Imagem do desenvolvedor"/>
+                <div class="sobre_mim_texto">
+                    <p class="animate-item">Sou um desenvolvedor iniciante na área de Front-end e Back-end.</p>
+                    <p class="animate-item">No momento, estudando Análise e Desenvolvimento de Sistemas no UNISenai</p>
+                    <p class="animate-item">Muito interessado pelo desenvolvimento de jogos :D</p>
+                </div>
+            </div>
         </section>
         
         <!-- Projetos -->
         <section id="projetos">
-            <h2>Projetos</h2>
-            <div class="cards">
-                <div class="card" onclick="flipCard(this)">
+            <h2 class="animate-item">Projetos</h2>
+            <div class="cards animate-item">
+                <div class="card animate-item" onclick="flipCard(this)">
                     <div class="card-front">
                         <h3>Projeto 1</h3>
                         <img src="images/crown.jpg" alt="Imagem do projeto">
@@ -46,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="flipCard(this)">
+                <div class="card animate-item" onclick="flipCard(this)">
                     <div class="card-front">
                         <h3>Projeto 2</h3>
                         <img src="images/crown.jpg" alt="Imagem do projeto">
@@ -57,7 +70,7 @@
                     </div>
                 </div>
                     
-                <div class="card" onclick="flipCard(this)">
+                <div class="card animate-item" onclick="flipCard(this)">
                     <div class="card-front">
                         <h3>Projeto 3</h3>
                         <img src="images/crown.jpg" alt="Imagem do projeto">
@@ -72,8 +85,8 @@
             
         <!-- Seção Contato -->
         <section id="contato">
-            <h2>Contato</h2>
-            <form>
+            <h2 class="animate-item">Contate-me!</h2>
+            <form class="animate-item">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required>
                 <label for="email">E-mail:</label>
@@ -86,13 +99,12 @@
             </form>
         </section>
         
-        <!-- Seção Sobre -->
-        <section id="sobre">
-            <h2>Sobre</h2>
-        </section>
     </main>
     <footer>
         <p>&copy 2025 - Todos os direitos reservados.</p>
+        <div class="redes_sociais">
+            <a href="https://github.com/lucasalvisimader" target="_blank"><img src="images/github_logo.png" alt="Github Logo"></a>
+        </div>
     </footer>
 
     <script src="js/scripts.js"></script>
