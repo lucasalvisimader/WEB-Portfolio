@@ -13,12 +13,12 @@
         <nav>
             <ul>
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
             </ul>
             <img src="images/lamb.jpg" alt="Logo do Site" class="logo_do_site">
             <ul>
+                <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#sobre">Sobre</a></li>
             </ul>
         </nav>
     </header>
@@ -27,67 +27,67 @@
     <main>
         <!-- Seção Início -->
         <section class="inicio" id="inicio">
-            <h1 class="animate-item">Olá! Sou Lucas Alvisi Mader.</h1>
-            <p class="animate-item">Um desenvolvedor.</p>
+            <h1 class="animate-item hidden">Olá! Sou Lucas Alvisi Mader.</h1>
+            <p class="animate-item hidden">Um desenvolvedor.</p>
         </section>
 
-        <!-- Seção Sobre -->
+        <!-- Seção Sobre Mim -->
         <section id="sobre_mim">
-            <h2 class="animate-item">Sobre mim</h2>
-            <div class="sobre_mim_container animate-item">
-                <img class="imagem_desenvolvedor animate-item" src="images/perfil_photo.jfif" alt="Imagem do desenvolvedor"/>
+            <h2 class="animate-item hidden">Sobre mim</h2>
+            <div class="sobre_mim_container animate-item hidden">
+                <img class="imagem_desenvolvedor animate-item hidden" src="images/perfil_photo.jfif" alt="Imagem do desenvolvedor"/>
                 <div class="sobre_mim_texto">
-                    <p class="animate-item">Sou um desenvolvedor iniciante na área de Front-end e Back-end.</p>
-                    <p class="animate-item">No momento, estudando Análise e Desenvolvimento de Sistemas no UNISenai</p>
-                    <p class="animate-item">Muito interessado pelo desenvolvimento de jogos :D</p>
+                    <p class="animate-item hidden">Sou um desenvolvedor iniciante na área de Front-end e Back-end.</p>
+                    <p class="animate-item hidden">No momento, estudando Análise e Desenvolvimento de Sistemas no UNISenai</p>
+                    <p class="animate-item hidden">Muito interessado pelo desenvolvimento de jogos :D</p>
                 </div>
             </div>
         </section>
         
         <!-- Projetos -->
         <section id="projetos">
-            <h2 class="animate-item">Projetos</h2>
-            <div class="cards animate-item">
-                <div class="card animate-item" onclick="flipCard(this)">
+            <h2 class="animate-item hidden">Projetos</h2>
+            <div class="cards animate-item hidden">
+                <div class="card animate-item hidden" onclick="flipCard(this)">
                     <div class="card-front">
-                        <h3>Inscryption React</h3>
-                        <img src="images/logo_projeto_1.jpg" alt="Imagem do projeto">
+                        <h3><a href="https://inscryption-front-end.vercel.app/" target="_blank" title="Clique para conhecer!">Inscryption React</a></h3>
+                        <img src="images/inscryption_react_projeto_1.jpg" alt="Imagem do projeto">
                     </div>
                     <div class="card-back">
-                        <h3>Inscryption React</h3>
+                        <h3><a href="https://inscryption-front-end.vercel.app/" target="_blank" title="Clique para conhecer!">Inscryption React</a></h3>
                         <p>Uma tentativa de recriar o jogo Inscryption em React.</p>
                         <p>Ainda em desenvolvimento.</p>
                     </div>
                 </div>
 
-                <div class="card animate-item" onclick="flipCard(this)">
+                <div class="card animate-item hidden" onclick="flipCard(this)">
                     <div class="card-front">
-                        <h3>Projeto 2</h3>
-                        <img src="images/crown.jpg" alt="Imagem do projeto">
+                        <h3><a href="https://github.com/lucasalvisimader/GameOfLife" target="_blank" title="Clique para conhecer!">Jogo da Vida (Conway)</a></h3>
+                        <img src="images/conway_game_of_life_projeto_2.gif" alt="Imagem do projeto">
                     </div>
                     <div class="card-back">
-                        <h3>Projeto 2</h3>
-                        <p>Descrição do projeto 2.</p>
+                        <h3><a href="https://github.com/lucasalvisimader/GameOfLife" target="_blank" title="Clique para conhecer!">Jogo da Vida (Conway)</a></h3>
+                        <p>Uma recriação do Jogo da Vida de John Horton Conway em Java.</p>
                     </div>
                 </div>
                     
-                <div class="card animate-item" onclick="flipCard(this)">
+                <div class="card animate-item hidden" onclick="flipCard(this)">
                     <div class="card-front">
-                        <h3>Projeto 3</h3>
-                        <img src="images/crown.jpg" alt="Imagem do projeto">
+                        <h3><a href="https://github.com/lucasalvisimader/Paintings-game" target="_blank" title="Clique para conhecer!">Jogo das Pinturas</a></h3>
+                        <img src="images/jogo_pinturas_projeto_3.png" alt="Imagem do projeto">
                     </div>
                     <div class="card-back">
-                        <h3>Projeto 3</h3>
-                        <p>Descrição do projeto 3.</p>
+                        <h3><a href="https://github.com/lucasalvisimader/Paintings-game" target="_blank" title="Clique para conhecer!">Jogo das Pinturas</a></h3>
+                        <p>Um mini-jogo criado para testar funcionalidades de realidade aumentada a partir de pinturas famosas.</p>
                     </div>
                 </div>
             </div>
         </section>
             
-        <!-- Seção Contato -->
+        <!-- Seção de Contato -->
         <section id="contato">
-            <h2 class="animate-item">Contate-me!</h2>
-            <form class="animate-item">
+            <h2 class="animate-item hidden">Contate-me!</h2>
+            <form class="animate-item hidden">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required>
                 <label for="email">E-mail:</label>

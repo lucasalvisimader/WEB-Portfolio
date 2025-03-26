@@ -15,6 +15,17 @@
     src: url('/fonts/CuteCat.otf') format('opentype');
 }
 
+body {
+    font-family: "Cute Cat";
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #110602;
+    overflow-x: hidden;
+}
+
+/* Estilo das scrollbars */
 ::-webkit-scrollbar {
     width: 1.2rem;
 }
@@ -30,17 +41,7 @@
     border: 3px solid #f9f2de;
 }
 
-body {
-    font-family: "Cute Cat";
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    color: #110602;
-}
-
 /* Estilo do cabeçalho */
-
 header {
     background: #21211f;
     color: #f1f1f1;
@@ -50,9 +51,48 @@ header {
     top: 0;
     z-index: 1000;
     font-size: 2rem;
-    overflow: hidden; /* Impede o fogo de vazar */
+    overflow: hidden;
 }
 
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo_do_site {
+    width: 90px;
+    border: solid 3px #fb273a;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+}
+
+header ul li {
+    margin: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: color 0.2s;
+}
+
+header ul li a:hover,
+header ul li a:active {
+    color: #a5a5a5;
+}
+
+/* Animação do fogo do cabeçalho */
 header::before,
 header::after {
     position: absolute;
@@ -94,44 +134,6 @@ header::after {
     }
 }
 
-header nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header .logo_do_site {
-    width: 90px;
-    border: solid 3px #fb273a;
-}
-
-header ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0;
-}
-
-header ul li {
-    margin: 0;
-}
-
-header ul li a {
-    text-decoration: none;
-    color: #f1f1f1;
-    transition: color 0.2s;
-}
-
-header ul li a:hover,
-header ul li a:active {
-    color: #a5a5a5;
-}
-
 /* Estilo das seções */
 main {
     flex: 1;
@@ -148,34 +150,7 @@ main section {
     scroll-margin-top: 200px;
     opacity: 0;
     transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-}
-
-/* Seções que surgem da esquerda */
-.from-left {
     transform: translateX(-100px);
-}
-
-/* Seções que surgem da direita */
-.from-right {
-    transform: translateX(100px);
-}
-
-section.animate {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Elementos internos da seção invisíveis */
-.hidden {
-    opacity: 0;
-    transform: translateX(100px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Animação dos itens da seção aparecendo */
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 #inicio {
@@ -204,6 +179,23 @@ section.animate {
     border-bottom: 3px solid #97968a;
 }
 
+/* Animação de seções e itens das seções */
+section.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Início */
 .inicio h1 {
     font-size: 2rem;
@@ -217,9 +209,8 @@ section.animate {
 .sobre_mim_container {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espaço entre a imagem e o texto */
+    gap: 20px;
     text-align: left;
-    justify-content: start; /* O texto fica à direita */
 }
 
 .imagem_desenvolvedor {
@@ -233,14 +224,12 @@ section.animate {
     max-width: 600px;
 }
 
-/* Cartões de projeto */
+/* Cards de projeto */
 .cards {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     margin-top: 20px;
-    overflow-x: auto;
     padding-bottom: 10px;
-    white-space: nowrap;
 }
 
 .card {
@@ -259,6 +248,11 @@ section.animate {
     flex: 0 0 auto;
 }
 
+.card a {
+    color: #f1f1f1;
+    text-shadow: 3px 3px #21211f;
+}
+
 .card-front, .card-back {
     backface-visibility: hidden;
     position: absolute;
@@ -270,6 +264,13 @@ section.animate {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+}
+
+.card-front h3, .card-back h3 {
+    position: absolute;
+    top: 1%;
+    font-size: 1.5rem;
 }
 
 .card-front {
@@ -286,8 +287,8 @@ section.animate {
 }
 
 .card img {
-    max-width: 50%;
-    height: auto;
+    width: auto;
+    height: 6rem;
     border-radius: 5px;
 }
 
@@ -295,7 +296,7 @@ section.animate {
     white-space: initial;
 }
 
-/* Formulário */
+/* Formulário de contato */
 
 form {
     max-width: 400px;
@@ -347,7 +348,7 @@ form button:hover {
     background-color: #21211f;
 }
 
-/* Rodapé fixo */
+/* Rodapé */
 
 footer {
     text-align: center;
@@ -363,6 +364,9 @@ footer {
     height: 50px;
 }
 
+
+/* Responsividade */
+
 @media (max-width: 768px) {
     header {
         padding: 10px;
@@ -375,7 +379,7 @@ footer {
     header nav {
         flex-direction: column;
         text-align: center;
-        gap: 20px;
+        gap: 0;
     }
 
     header nav ul li a {
@@ -396,10 +400,6 @@ footer {
         width: 80%;
     }
 
-    .card img {
-        max-width: 20%;
-    }
-
     main section {
         padding: 20px 10px;
     }
@@ -418,9 +418,8 @@ footer {
         font-size: 1.15rem;
     }
 
-    form {
-        max-width: 300px;
-        padding: 0 10px;
+    .sobre_mim_container {
+        flex-direction: column;
     }
 
     .card {
@@ -428,6 +427,12 @@ footer {
     }
     
     .card img {
-        max-width: 30%;
+        width: auto;
+        height: 5rem;
+    }
+
+    form {
+        max-width: 300px;
+        padding: 0 10px;
     }
 }
